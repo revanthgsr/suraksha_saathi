@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suraksha Saathi - Manage Guards</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="header-title">
+            <h1>Admin Dashboard</h1>
+        </div>
+        <nav class="header-nav">
+            <div class="status-bar">
+                <span class="status-badge status-active">Active: 42</span>
+                <span class="status-badge status-leave">On Leave: 3</span>
+            </div>
+            <button id="logout-btn" class="btn btn-secondary">Logout</button>
+        </nav>
+    </header>
+
+    <main class="dashboard-container">
+        
+        <nav class="breadcrumb">
+            <a href="dashboard.html">&larr; Back to Dashboard</a>
+        </nav>
+
+        <div class="page-header">
+            <h2>Manage Guards</h2>
+            <button id="add-new-guard-btn" class="btn">Add New Guard</button>
+        </div>
+        
+        <div class="card">
+            <div class="table-container">
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>Guard ID</th>
+                            <th>Name</th>
+                            <th>Phone Number</th>
+                            <th>Status</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="guards-table-body">
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+
+    <div id="guard-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h3 id="modal-title">Add New Guard</h3>
+            
+            <form id="guard-form">
+                <div class="form-group">
+                    <label for="guard-name">Full Name</label>
+                    <input type="text" id="guard-name" required>
+                </div>
+                <div class="form-group">
+                    <label for="guard-phone">Phone Number</label>
+                    <input type="tel" id="guard-phone" required>
+                </div>
+                <div class="form-group">
+                    <label for="guard-dob">Date of Birth</label>
+                    <input type="date" id="guard-dob" required>
+                </div>
+                <div class="form-group">
+                    <label for="guard-gender">Gender</label>
+                    <select id="guard-gender" required>
+                        <option value="">-- Select --</option>
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="guard-password">Set Initial Password</label>
+                    <input type="password" id="guard-password" required>
+                </div>
+                
+                <button type="submit" class="btn">Save Guard</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

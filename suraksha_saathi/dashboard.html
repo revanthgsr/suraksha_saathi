@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suraksha Saathi - Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="header-title">
+            <h1>Suraksha Saathi</h1>
+        </div>
+        <nav class="header-nav">
+            <span id="welcome-msg" style="color: white; margin-right: 20px; font-weight: 500;">Welcome</span>
+            
+            <a href="#" id="logout-btn" class="nav-logout-btn">Logout</a>
+            
+            <a href="profile.html" class="nav-link">Profile</a>
+            <button id="emergency-btn" class="emergency-btn">EMERGENCY</button>
+        </nav>
+    </header>
+
+    <main class="dashboard-container">
+        <h2>Guard Dashboard</h2>
+        
+        <div class="dashboard-grid">
+            
+            <div class="card">
+                <h3>Attendance</h3>
+                <p>Mark your daily photo-based attendance or view your history.</p>
+                <div class="card-actions">
+                    <a href="attendance.html" class="btn">Mark Attendance</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3>Leave Application</h3>
+                <p>Apply for new leave or check the status of your applications.</p>
+                <div class="card-actions">
+                    <a href="leave.html" class="btn">Apply for Leave</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3>Weekly Schedule</h3>
+                <p>View your upcoming duty roster and timings for the week.</p>
+                <div class="card-actions">
+                    <a href="schedule.html" class="btn">View Schedule</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3>Payment History</h3>
+                <p>Access your past payment slips and salary details.</p>
+                <div class="card-actions">
+                    <a href="payment.html" class="btn">View Details</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3>Report an Issue</h3>
+                <p>Report any grievances or campus issues directly to authorities.</p>
+                <div class="card-actions">
+                    <a href="complaint.html" class="btn">File Complaint</a>
+                </div>
+            </div>
+            
+            <div class="card">
+                <h3>My Profile</h3>
+                <p>View and update your personal information.</p>
+                <div class="card-actions">
+                    <a href="profile.html" class="btn">View Profile</a>
+                </div>
+            </div>
+
+        </div>
+    </main>
+    
+    <script src="script.js"></script>
+</body>
+</html>

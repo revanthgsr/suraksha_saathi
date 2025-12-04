@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suraksha Saathi - Report an Issue</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="header-title">
+            <h1>Suraksha Saathi</h1>
+        </div>
+        <nav class="header-nav">
+            <a href="profile.html" class="nav-link">Profile</a>
+            <a href="#" id="logout-btn" class="nav-logout-btn">Logout</a>
+            <button id="emergency-btn" class="emergency-btn">EMERGENCY</button>
+        </nav>
+    </header>
+
+    <main class="dashboard-container">
+        
+        <nav class="breadcrumb">
+            <a href="dashboard.html">&larr; Back to Dashboard</a>
+        </nav>
+
+        <h2>Report an Issue</h2>
+
+        <div class="leave-container"> <div class="card">
+                <h3>New Complaint Form</h3>
+                <form id="complaint-form">
+                    
+                    <div class="form-group">
+                        <label for="complaint-type">Problem Type</label>
+                        <select id="complaint-type" class="form-select" required>
+                            <option value="">-- Select a problem type --</option>
+                            <option value="safety">Safety Hazard (e.g., broken light, fire risk)</option>
+                            <option value="maintenance">Maintenance Issue (e.g., leaking pipe)</option>
+                            <option value="misconduct">Misconduct (e.g., staff or student issue)</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="complaint-photo" class="file-upload-label">
+                            <span id="file-name-display">Upload Photo Proof</span>
+                            <input type="file" id="complaint-photo" accept="image/*">
+                        </label>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="complaint-description">Description</label>
+                        <textarea id="complaint-description" rows="5" placeholder="Please describe the issue in detail..." required></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn">Submit Complaint</button>
+                </form>
+            </div>
+
+            <div class="card">
+                <h3>My Complaint History</h3>
+                <div class="table-container">
+                    <table class="leave-table">
+                        <thead>
+                            <tr>
+                                <th>Date Filed</th>
+                                <th>Type</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody id="complaint-table-body">
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            
+        </div>
+        
+    </main>
+    
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suraksha Saathi - Weekly Schedule</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="header-title">
+            <h1>Suraksha Saathi</h1>
+        </div>
+        <nav class="header-nav">
+            <a href="profile.html" class="nav-link">Profile</a>
+            <a href="#" id="logout-btn" class="nav-logout-btn">Logout</a>
+            <button id="emergency-btn" class="emergency-btn">EMERGENCY</button>
+        </nav>
+    </header>
+
+    <main class="dashboard-container">
+        
+        <nav class="breadcrumb">
+            <a href="dashboard.html">&larr; Back to Dashboard</a>
+        </nav>
+
+        <h2>Weekly Schedule</h2>
+        
+        <div class="card">
+            <h3>My Roster</h3>
+            
+            <div class="table-container">
+                <table class="schedule-table">
+                    <thead>
+                        <tr>
+                            <th>Day</th>
+                            <th>Date</th>
+                            <th>Shift</th>
+                            <th>Location / Post</th>
+                        </tr>
+                    </thead>
+                    <tbody id="schedule-table-body">
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="card-actions">
+                <button id="request-change-btn" class="btn">Request Shift/Location Change</button>
+            </div>
+        </div>
+
+    </main>
+
+    <div id="request-change-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h3>Request Change</h3>
+            
+            <form id="change-request-form">
+                <div class="form-group">
+                    <label for="request-date">Select Date</label>
+                    <input type="date" id="request-date" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="request-problem">Request Type</label>
+                    <select id="request-problem" class="form-select" required>
+                        <option value="">-- Select Request Type --</option>
+                        <option value="shift">Shift Change</option>
+                        <option value="location">Location Change</option>
+                        <option value="others">Others / Issue</option>
+                    </select>
+                </div>
+
+                <div id="target-shift-group" class="form-group hidden">
+                    <label for="target-shift">Select Desired Shift</label>
+                    <select id="target-shift" class="form-select">
+                        <option value="">-- Select Shift --</option>
+                        <option value="Morning (A)">Morning (A) - 6am to 2pm</option>
+                        <option value="Evening (B)">Evening (B) - 2pm to 10pm</option>
+                        <option value="Night (C)">Night (C) - 10pm to 6am</option>
+                        <option value="OFF">Weekly Off</option>
+                    </select>
+                </div>
+
+                <div id="target-location-group" class="form-group hidden">
+                    <label for="target-location">Select Desired Location</label>
+                    <select id="target-location" class="form-select">
+                        <option value="">-- Select Location --</option>
+                        <option value="Main Gate">Main Gate</option>
+                        <option value="Admin Building">Admin Building</option>
+                        <option value="Hostel Block 5">Hostel Block 5</option>
+                        <option value="Library">Library</option>
+                        <option value="Parking Lot">Parking Lot</option>
+                    </select>
+                </div>
+
+                <div id="other-reason-group" class="form-group hidden">
+                    <label for="other-reason">Please Specify Reason</label>
+                    <textarea id="other-reason" rows="4"></textarea>
+                </div>
+                
+                <button type="submit" class="btn">Submit Request</button>
+            </form>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

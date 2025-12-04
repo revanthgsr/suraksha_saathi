@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suraksha Saathi - Admin Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="header-title">
+            <h1>Admin Dashboard</h1>
+        </div>
+        <nav class="header-nav">
+            <div class="status-bar">
+                <span class="status-badge status-active">Active: 42</span>
+                <span class="status-badge status-leave">On Leave: 3</span>
+            </div>
+            <button id="logout-btn" class="btn btn-secondary">Logout</button>
+        </nav>
+    </header>
+
+    <main class="dashboard-container">
+        <h2>System Management</h2>
+        
+        <div class="dashboard-grid">
+            
+            <div class="card">
+                <h3>Manage Guards</h3>
+                <p>Add new guards, edit profiles, and manage guard assignments.</p>
+                <div class="card-actions">
+                    <a href="manage-guards.html" class="btn">Go to Guards</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3>Leave Requests</h3>
+                <p>View all pending leave applications and approve or deny them.</p>
+                <div class="card-actions">
+                    <a href="leave-requests.html" class="btn">Review Requests</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3>View Complaints</h3>
+                <p>Read and manage all issues and grievances reported by guards.</p>
+                <div class="card-actions">
+                    <a href="complaints.html" class="btn">View Reports</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3>Attendance Records</h3>
+                <p>Check daily attendance logs, view photos, and track punctuality.</p>
+                <div class="card-actions">
+                    <a href="attendance-records.html" class="btn">View Logs</a>
+                </div>
+            </div>
+            
+            <div class="card">
+                <h3>Emergency Alerts</h3>
+                <p>View a log of all emergency alerts sent by guards.</p>
+                <div class="card-actions">
+                    <a href="emergency-alerts.html" class="btn">View Alerts</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3>Manage Schedules</h3>
+                <p>Create and publish weekly duty schedules for all guards.</p>
+                <div class="card-actions">
+                    <a href="manage-schedules.html" class="btn">Edit Schedules</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3>Manage Payments</h3>
+                <p>View salary history and record new payment transactions.</p>
+                <div class="card-actions">
+                    <a href="manage-payments.html" class="btn">Payments</a>
+                </div>
+            </div>
+
+        </div>
+    </main>
+    
+    <script src="script.js"></script>
+</body>
+</html>

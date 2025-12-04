@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suraksha Saathi - Emergency Alerts</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="header-title">
+            <h1>Admin Dashboard</h1>
+        </div>
+        <nav class="header-nav">
+            <div class="status-bar">
+                <span class="status-badge status-active">Active: 42</span>
+                <span class="status-badge status-leave">On Leave: 3</span>
+            </div>
+            <button id="logout-btn" class="btn btn-secondary">Logout</button>
+        </nav>
+    </header>
+
+    <main class="dashboard-container">
+        
+        <nav class="breadcrumb">
+            <a href="dashboard.html">&larr; Back to Dashboard</a>
+        </nav>
+
+        <h2>Emergency Alert Log</h2>
+        
+        <div class="card">
+            <div class="table-container">
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>Date & Time</th>
+                            <th>Guard ID</th>
+                            <th>Guard Name</th>
+                            <th>Status</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="alert-table-body">
+                        <tr>
+                            <td>05/11/2025, 02:14 AM</td>
+                            <td>G-12347</td>
+                            <td>Amit Patel</td>
+                            <td><span class="status-badge status-pending">Pending</span></td>
+                            <td class="action-cell">
+                                <button class="btn btn-sm btn-success">Acknowledge</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>02/11/2025, 10:30 PM</td>
+                            <td>G-12345</td>
+                            <td>Ramesh Kumar</td>
+                            <td><span class="status-badge status-review">Acknowledged</span></td>
+                            <td class="action-cell">
+                                </td>
+                        </tr>
+                         <tr>
+                            <td>28/10/2025, 08:01 AM</td>
+                            <td>G-12346</td>
+                            <td>Suresh Singh</td>
+                            <td><span class="status-badge status-review">Acknowledged</span></td>
+                            <td class="action-cell">
+                                </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

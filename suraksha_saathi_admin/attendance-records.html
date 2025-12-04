@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suraksha Saathi - Attendance Records</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="header-title">
+            <h1>Admin Dashboard</h1>
+        </div>
+        <nav class="header-nav">
+            <div class="status-bar">
+                <span class="status-badge status-active">Active: 42</span>
+                <span class="status-badge status-leave">On Leave: 3</span>
+            </div>
+            <button id="logout-btn" class="btn btn-secondary">Logout</button>
+        </nav>
+    </header>
+
+    <main class="dashboard-container">
+        
+        <nav class="breadcrumb">
+            <a href="dashboard.html">&larr; Back to Dashboard</a>
+        </nav>
+
+        <h2>Attendance Records</h2>
+        
+        <div class="card">
+            <div class="table-container">
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>Guard ID</th>
+                            <th>Name</th>
+                            <th>Date</th>
+                            <th>Time In</th>
+                            <th>Photo</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody id="attendance-table-body">
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+
+    <div id="photo-modal" class="modal">
+        <div class="modal-content modal-photo">
+            <span class="close-btn" id="photo-modal-close">&times;</span>
+            <h3>Attendance Photo</h3>
+            <img id="complaint-image" src="https://via.placeholder.com/600x600" alt="Attendance Photo">
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

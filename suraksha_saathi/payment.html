@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suraksha Saathi - Payment History</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="header-title">
+            <h1>Suraksha Saathi</h1>
+        </div>
+        <nav class="header-nav">
+            <a href="profile.html" class="nav-link">Profile</a>
+            <a href="#" id="logout-btn" class="nav-logout-btn">Logout</a>
+            <button id="emergency-btn" class="emergency-btn">EMERGENCY</button>
+        </nav>
+    </header>
+
+    <main class="dashboard-container">
+        
+        <nav class="breadcrumb">
+            <a href="dashboard.html">&larr; Back to Dashboard</a>
+        </nav>
+
+        <h2>My Payment History</h2>
+        
+        <div class="card">
+            <div class="table-container">
+                <table class="leave-table">
+                    <thead>
+                        <tr>
+                            <th>Payment Date</th>
+                            <th>Title</th>
+                            <th>Transaction ID</th>
+                            <th>Amount (INR)</th>
+                        </tr>
+                    </thead>
+                    <tbody id="payment-table-body">
+                    </tbody>
+                </table>
+            </div>
+            </div>
+
+    </main>
+    
+    <script src="script.js"></script>
+</body>
+</html>

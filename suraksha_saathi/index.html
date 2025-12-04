@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suraksha Saathi - Login</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="main-header login-header">
+        <div class="header-title">
+            <h1>Suraksha Saathi</h1>
+        </div>
+    </header>
+
+    <div class="login-container">
+        <form id="login-form">
+            <h2>Suraksha Saathi</h2>
+            <p>Welcome, Guard. Please log in.</p>
+            
+            <div class="form-group">
+                <label for="guard-id">Guard ID</label>
+                <input type="text" id="guard-id" name="guard-id" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            
+            <button type="submit" class="btn">Login</button>
+            
+            <a href="#" id="forgot-password-link" class="forgot-link">Forgot Password?</a>
+        </form>
+    </div>
+
+    <div id="forgot-password-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h3>Reset Password</h3>
+            
+            <form id="step1-details">
+                <p>Please enter your ID and phone number to verify your account.</p>
+                <div class="form-group">
+                    <label for="modal-guard-id">Guard ID</label>
+                    <input type="text" id="modal-guard-id" required>
+                </div>
+                <div class="form-group">
+                    <label for="modal-phone">Phone Number</label>
+                    <input type="tel" id="modal-phone" required>
+                </div>
+                <button type="submit" class="btn">Send OTP</button>
+            </form>
+            
+            <form id="step2-otp" style="display: none;">
+                <p>An OTP has been sent to your registered mobile number.</p>
+                <div class="form-group">
+                    <label for="modal-otp">Enter OTP</label>
+                    <input type="text" id="modal-otp" required>
+                </div>
+                <button type="submit" class="btn">Verify OTP</button>
+            </form>
+            
+            <form id="step3-reset" style="display: none;">
+                <p>OTP Verified. Please set your new password.</p>
+                <div class="form-group">
+                    <label for="modal-new-password">New Password</label>
+                    <input type="password" id="modal-new-password" required>
+                </div>
+                <div class="form-group">
+                    <label for="modal-confirm-password">Confirm New Password</label>
+                    <input type="password" id="modal-confirm-password" required>
+                </div>
+                <button type="submit" class="btn">Reset Password</button>
+            </form>
+            
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 

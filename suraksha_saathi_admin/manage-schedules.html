@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suraksha Saathi - Manage Schedules</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="header-title">
+            <h1>Admin Dashboard</h1>
+        </div>
+        <nav class="header-nav">
+            <div class="status-bar">
+                <span class="status-badge status-active">Active: --</span>
+                <span class="status-badge status-leave">On Leave: --</span>
+            </div>
+            <button id="logout-btn" class="btn btn-secondary">Logout</button>
+        </nav>
+    </header>
+
+    <main class="dashboard-container">
+        
+        <nav class="breadcrumb">
+            <a href="dashboard.html">&larr; Back to Dashboard</a>
+        </nav>
+
+        <div class="page-header">
+            <h2>Manage Weekly Schedules</h2>
+            <button id="save-schedule-btn" class="btn">Save Changes</button>
+        </div>
+
+        <div class="week-navigator" style="justify-content: center;">
+            <h3 id="week-title">Loading current week...</h3>
+        </div>
+        
+        <div class="card">
+            <div class="table-container">
+                <table class="data-table schedule-table">
+                    <thead>
+                        <tr id="schedule-header-row">
+                            <th>Guard Name</th>
+                            <th>Mon</th>
+                            <th>Tue</th>
+                            <th>Wed</th>
+                            <th>Thu</th>
+                            <th>Fri</th>
+                            <th>Sat</th>
+                            <th>Sun</th>
+                        </tr>
+                    </thead>
+                    <tbody id="schedule-table-body">
+                        </tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

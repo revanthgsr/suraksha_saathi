@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suraksha Saathi - Leave Application</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="header-title">
+            <h1>Suraksha Saathi</h1>
+        </div>
+        <nav class="header-nav">
+            <a href="profile.html" class="nav-link">Profile</a>
+            <a href="#" id="logout-btn" class="nav-logout-btn">Logout</a>
+            <button id="emergency-btn" class="emergency-btn">EMERGENCY</button>
+        </nav>
+    </header>
+
+    <main class="dashboard-container">
+        
+        <nav class="breadcrumb">
+            <a href="dashboard.html">&larr; Back to Dashboard</a>
+        </nav>
+
+        <h2>Leave Application & History</h2>
+
+        <div class="leave-container">
+
+            <div class="card">
+                <h3>New Leave Request</h3>
+                <form id="leave-form">
+                    <div class="form-group-row">
+                        <div class="form-group">
+                            <label for="start-date">Start Date</label>
+                            <input type="date" id="start-date" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="end-date">End Date</label>
+                            <input type="date" id="end-date" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="leave-reason">Reason for Leave</label>
+                        <textarea id="leave-reason" rows="5" placeholder="Please provide a brief reason..." required></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn">Submit Application</button>
+                </form>
+            </div>
+
+            <div class="card">
+                <h3>My Leave History</h3>
+                <div class="table-container">
+                    <table class="leave-table">
+                        <thead>
+                            <tr>
+                                <th>Start Date</th>
+                                <th>End Date</th>
+                                <th>Reason</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody id="leave-table-body">
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            
+        </div>
+        
+    </main>
+    
+    <script src="script.js"></script>
+</body>
+</html>

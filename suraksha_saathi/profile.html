@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suraksha Saathi - My Profile</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="header-title">
+            <h1>Suraksha Saathi</h1>
+        </div>
+        <nav class="header-nav">
+            <a href="profile.html" class="nav-link">Profile</a>
+            <a href="#" id="logout-btn" class="nav-logout-btn">Logout</a>
+            <button id="emergency-btn" class="emergency-btn">EMERGENCY</button>
+        </nav>
+    </header>
+
+    <main class="dashboard-container">
+        
+        <nav class="breadcrumb">
+            <a href="dashboard.html">&larr; Back to Dashboard</a>
+        </nav>
+
+        <h2>My Profile</h2>
+        
+        <div class="profile-card">
+            <div class="profile-header">
+                <h3>Guard Information</h3>
+                <div class="profile-actions">
+                    <button id="edit-btn" class="btn">Edit</button>
+                    <button id="save-btn" class="btn hidden">Save Changes</button>
+                    <button id="cancel-btn" class="btn btn-secondary hidden">Cancel</button>
+                </div>
+            </div>
+            
+            <form id="profile-form">
+                <div class="profile-info">
+                    <div class="info-item">
+                        <span class="info-label">Guard ID</span>
+                        <span class="info-value">G-12345</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">Full Name</span>
+                        <span class="info-value">Ramesh Kumar</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">Date of Birth</span>
+                        <span class="info-value">15/08/1982</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">Gender</span>
+                        <span class="info-value">Male</span>
+                    </div>
+                    <div class="info-item">
+                        <label for="phone" class="info-label">Phone Number</label>
+                        <input type="tel" id="phone" class="info-value-input" value="9876543210" readonly>
+                    </div>
+                </div>
+                
+                <div id="edit-section" class="profile-edit-section hidden">
+                    <hr>
+                    <h4>Change Password</h4>
+                    <div class="form-group">
+                        <label for="old-password">Old Password</label>
+                        <input type="password" id="old-password">
+                    </div>
+                    <div class="form-group">
+                        <label for="new-password">New Password</label>
+                        <input type="password" id="new-password">
+                    </div>
+                    <div class="form-group">
+                        <label for="confirm-password">Confirm New Password</label>
+                        <input type="password" id="confirm-password">
+                    </div>
+                    <p id="password-error" class="text-danger hidden">Passwords do not match.</p>
+                </div>
+            </form>
+
+        </div>
+        
+    </main>
+    
+    <script src="script.js"></script>
+</body>
+</html>

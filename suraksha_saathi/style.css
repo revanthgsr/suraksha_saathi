@@ -1,0 +1,580 @@
+/* --- Global Styles & Color Theme --- */
+:root {
+    --primary-blue: #00005a;  /* Dark blue from header */
+    --button-blue: #3f51b5; /* Lighter blue for buttons */
+    --button-hover: #303f9f;
+    --emergency-red: #d32f2f;
+    --emergency-hover: #b71c1c;
+    --light-bg: #f4f7f6;     /* Light gray page background */
+    --white: #ffffff;
+    --text-dark: #333333;
+    --text-light: #fefefe;
+    --border-color: #e0e0e0;
+    --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--light-bg);
+    color: var(--text-dark);
+}
+
+h1, h2, h3 {
+    color: var(--primary-blue);
+}
+
+.btn {
+    background-color: var(--button-blue);
+    color: var(--white);
+    padding: 10px 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+}
+
+.btn:hover {
+    background-color: var(--button-hover);
+}
+
+.btn-secondary {
+    background-color: #6c757d;
+}
+.btn-secondary:hover {
+    background-color: #5a6268;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+
+.form-group input[type="text"],
+.form-group input[type="password"],
+.form-group input[type="tel"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    box-sizing: border-box; /* Important for padding to work well */
+}
+
+/* --- Login Page Styles --- */
+.login-container {
+    max-width: 450px;
+    margin: 10vh auto; /* 10% from top, centered horizontally */
+    padding: 30px;
+    background-color: var(--white);
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+    text-align: center;
+}
+
+.login-container h2 {
+    margin-top: 0;
+    font-size: 28px;
+}
+
+.login-container .btn {
+    width: 100%;
+    padding: 12px;
+}
+
+.forgot-link {
+    display: block;
+    margin-top: 15px;
+    color: var(--button-blue);
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.forgot-link:hover {
+    text-decoration: underline;
+}
+
+/* --- Modal (Popup) Styles --- */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.6); /* Dim background */
+}
+
+.modal-content {
+    background-color: var(--white);
+    margin: 15% auto;
+    padding: 30px;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 500px;
+    position: relative;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.close-btn {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    cursor: pointer;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+    color: #333;
+}
+
+
+/* --- Dashboard Page Styles --- */
+
+/* Header / Status Bar */
+.main-header {
+    background-color: var(--primary-blue);
+    color: var(--text-light);
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.main-header h1 {
+    color: var(--text-light);
+    font-size: 24px;
+}
+
+.header-nav {
+    display: flex;
+    align-items: center;
+}
+
+.nav-link {
+    color: var(--text-light);
+    text-decoration: none;
+    margin-right: 20px;
+    font-weight: 500;
+}
+
+.nav-link:hover {
+    text-decoration: underline;
+}
+
+.emergency-btn {
+    background-color: var(--emergency-red);
+    color: var(--white);
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.emergency-btn:hover {
+    background-color: var(--emergency-hover);
+}
+
+/* Dashboard Content */
+.dashboard-container {
+    padding: 20px;
+}
+
+.dashboard-container h2 {
+    font-size: 26px;
+    margin-bottom: 20px;
+}
+
+/* Card Grid Layout */
+.dashboard-grid {
+    display: grid;
+    /* This creates a responsive grid. 
+       'auto-fit': creates as many columns as fit.
+       'minmax(300px, 1fr)': each column is at least 300px wide,
+       and all columns share the space equally (1fr).
+    */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+/* Card Styles */
+.card {
+    background-color: var(--white);
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+    border: 1px solid var(--border-color);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Pushes action buttons to the bottom */
+    min-height: 150px;
+}
+
+.card h3 {
+    margin-top: 0;
+    font-size: 20px;
+}
+
+.card p {
+    flex-grow: 1; /* Makes the paragraph take up available space */
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+.card-actions {
+    margin-top: 15px;
+    display: flex;
+    gap: 10px; /* Adds space between buttons */
+}
+
+/* --- Profile Page Styles --- */
+
+.breadcrumb {
+    margin-bottom: 20px;
+}
+
+.breadcrumb a {
+    text-decoration: none;
+    color: var(--button-blue);
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.breadcrumb a:hover {
+    text-decoration: underline;
+}
+
+.profile-card {
+    background-color: var(--white);
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+    border: 1px solid var(--border-color);
+    max-width: 800px; /* Limit width for readability */
+    margin: 0 auto; /* Center the card */
+}
+
+.profile-header {
+    padding: 20px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.profile-header h3 {
+    margin: 0;
+}
+
+.profile-info {
+    padding: 20px;
+}
+
+.info-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 0;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.info-item:last-child {
+    border-bottom: none; /* Remove border from last item */
+}
+
+.info-label {
+    font-weight: 500;
+    color: #555;
+}
+
+.info-value {
+    font-weight: 400;
+    color: var(--text-dark);
+}
+
+/* --- Editable Profile Styles --- */
+
+/* Utility class to hide/show elements */
+.hidden {
+    display: none !important;
+}
+
+/* Red text for errors */
+.text-danger {
+    color: var(--emergency-red);
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+/* Style the buttons in the profile header */
+.profile-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.profile-actions {
+    display: flex;
+    gap: 10px;
+}
+
+/* Style for the phone number input */
+.info-value-input {
+    font-size: 16px;
+    font-family: inherit;
+    color: var(--text-dark);
+    padding: 5px 8px;
+    border: 1px solid transparent; /* No border in read-only state */
+    border-radius: 5px;
+    background-color: transparent;
+    text-align: right;
+    width: 200px; /* Adjust as needed */
+    transition: border 0.3s ease, background-color 0.3s ease;
+}
+
+/* This is how the input looks when we are NOT in read-only mode */
+.info-value-input:not([readonly]) {
+    border-color: var(--border-color);
+    background-color: var(--light-bg);
+}
+
+/* Style for the new hidden password section */
+.profile-edit-section {
+    padding: 0 20px 20px 20px;
+}
+
+.profile-edit-section h4 {
+    margin-top: 15px;
+    margin-bottom: 20px;
+    color: var(--primary-blue);
+}
+
+/* We can re-use the .form-group from the login page */
+.profile-edit-section .form-group input {
+    width: 100%; /* Make input take full width of its container */
+}
+
+/* --- Leave Application Page Styles --- */
+
+/* Make date inputs and textarea full width */
+.form-group input[type="date"],
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    box-sizing: border-box; /* Important for padding */
+    font-family: inherit;
+    font-size: 16px;
+}
+
+/* Arrange date fields side-by-side */
+.form-group-row {
+    display: flex;
+    gap: 20px;
+    width: 100%;
+}
+
+.form-group-row .form-group {
+    width: 100%; /* Each takes half the space */
+}
+
+/* Style the history table */
+.table-container {
+    width: 100%;
+    overflow-x: auto; /* Adds horizontal scroll on small screens */
+}
+
+.leave-table {
+    width: 100%;
+    border-collapse: collapse; /* Clean, modern table lines */
+    margin-top: 15px;
+}
+
+.leave-table th,
+.leave-table td {
+    border: 1px solid var(--border-color);
+    padding: 12px 15px;
+    text-align: left;
+}
+
+.leave-table th {
+    background-color: var(--light-bg);
+    color: var(--primary-blue);
+    font-weight: 600;
+}
+
+.leave-table tbody tr:nth-child(even) {
+    background-color: #fcfcfc;
+}
+
+/* Status badge styles */
+.status {
+    padding: 5px 10px;
+    border-radius: 15px;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--white);
+}
+
+.status-approved {
+    background-color: #2e7d32; /* Green */
+}
+.status-pending {
+    background-color: #f57c00; /* Orange */
+}
+.status-denied {
+    background-color: var(--emergency-red); /* Red */
+}
+
+/* --- Schedule Page Styles --- */
+
+.schedule-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+.schedule-table th,
+.schedule-table td {
+    border: 1px solid var(--border-color);
+    padding: 12px 15px;
+    text-align: left;
+}
+
+.schedule-table th {
+    background-color: var(--light-bg);
+    color: var(--primary-blue);
+    font-weight: 600;
+}
+
+.schedule-table tbody tr:nth-child(even) {
+    background-color: #fcfcfc;
+}
+
+.schedule-table .shift-off {
+    font-weight: bold;
+    color: var(--emergency-red);
+}
+
+/* Style for the <select> dropdown */
+.form-select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-family: inherit;
+    font-size: 16px;
+    background-color: var(--white); /* Ensures consistent background */
+}
+
+/* We can reuse .card-actions, but let's make sure it's aligned right */
+.card .card-actions {
+    justify-content: flex-end; /* Aligns button to the right */
+}
+
+/* --- Complaint Page Styles --- */
+
+/* Custom File Upload Button */
+.file-upload-label {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    border: 1px dashed var(--border-color);
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: var(--light-bg);
+    text-align: center;
+    transition: background-color 0.3s ease;
+    box-sizing: border-box;
+}
+.file-upload-label:hover {
+    background-color: #e9ecef;
+}
+
+/* Hide the default HTML file input */
+.file-upload-label input[type="file"] {
+    display: none; 
+}
+
+/* This is the text inside our custom button */
+#file-name-display {
+    color: var(--button-blue);
+    font-weight: 500;
+    font-size: 15px;
+}
+
+/* New Status Badge Styles */
+.status-review {
+    background-color: #0288d1; /* Blue */
+}
+.status-resolved {
+    background-color: #2e7d32; /* Green */
+}
+
+/* We already have .status-approved, let's reuse it for Resolved */
+/* You can replace .status-resolved with .status-approved if you want */
+.status-resolved {
+    background-color: #2e7d32; /* Green */
+}
+
+/* --- Attendance Page Styles --- */
+
+.attendance-step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    width: 100%;
+}
+
+/* Style the video feed and canvas */
+#video-feed,
+#photo-canvas {
+    width: 100%;
+    max-width: 500px; /* Set a max width */
+    height: auto;
+    border-radius: 8px;
+    background-color: #333; /* Dark background for loading */
+    border: 1px solid var(--border-color);
+}
+
+/* --- Status: Late --- */
+.status-late {
+    background-color: #f57c00; /* Orange */
+    color: white;
+}
+
+/* --- Logout Button Style --- */
+
+.nav-logout-btn {
+    display: inline-block;
+    background-color: #6c757d; /* This is a standard button grey */
+    color: var(--white);
+    padding: 8px 14px; /* Gives it a button shape */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 500;
+    text-decoration: none; /* Removes the link underline */
+    transition: background-color 0.3s ease;
+    margin-right: 20px; /* Keeps the spacing from the emergency button */
+}
+
+.nav-logout-btn:hover {
+    background-color: #5a6268; /* Darker grey on hover */
+}
